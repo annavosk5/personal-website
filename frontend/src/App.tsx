@@ -6,7 +6,7 @@ import { Footer } from "@/components/sections/footer/Footer"
 import { HeroSection } from "@/components/sections/hero/HeroSection"
 import { Navbar } from "@/components/sections/navbar/Navbar"
 import { ProjectsSection } from "@/components/sections/projects/ProjectsSection"
-import { InterestsSection } from "@/components/sections/interests/InterestsSection"
+import { SkillsSection } from "@/components/sections/skills/SkillsSection"
 import './App.css'
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
       <ExperienceSection />
       <ProjectsSection />
       <EducationSkillsSection />
-      <InterestsSection />
+      <SkillsSection />
       <ContactSection />
       <Footer />
     </main>
