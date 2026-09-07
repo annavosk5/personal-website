@@ -11,12 +11,13 @@ const navigationLinks = [
 
 export function Navbar() {
   return (
-    <header className="border-b border-border bg-background text-foreground">
+    <header className="sticky top-0 z-50 border-b border-border/80 bg-background/85 text-foreground backdrop-blur">
       <nav
         aria-label="Main navigation"
-        className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
+        className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3"
       >
-        <a href="#hero" className="text-sm font-semibold tracking-tight">
+        <a href="#hero" className="group flex items-center gap-2 text-sm font-semibold tracking-tight">
+          <span className="size-2 rounded-full bg-primary transition-transform group-hover:scale-125" />
           Anna Voskoboynik
         </a>
 
@@ -25,7 +26,7 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              className="text-sm text-muted-foreground transition-colors hover:text-primary"
             >
               {link.label}
             </a>

@@ -1,6 +1,6 @@
 export function AboutSection() {
   return (
-    <section id="about" className="bg-muted/70">
+    <section id="about" className="border-y border-border/60 bg-muted/70">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[0.75fr_1.25fr]">
         <div>
           <p className="text-sm font-medium tracking-[0.2em] text-muted-foreground uppercase">
@@ -9,9 +9,10 @@ export function AboutSection() {
           <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
             About Me
           </h2>
+          <div className="mt-6 h-px w-12 bg-primary" />
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-6 rounded-2xl border border-border/70 bg-card/70 p-6 shadow-sm sm:p-8">
           <p className="text-lg leading-8 text-foreground">
             I&apos;m a Computer Science student interested in software engineering,
             backend development, and artificial intelligence. I enjoy building

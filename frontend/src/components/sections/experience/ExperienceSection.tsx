@@ -29,7 +29,7 @@ export function ExperienceSection() {
           {experiences.map((experience, index) => (
             <motion.li
               key={experience.id}
-              className="relative rounded-xl p-5 pl-10 transition-colors hover:bg-card"
+              className="relative rounded-xl border border-transparent p-5 pl-10 transition-colors hover:border-border/70 hover:bg-card hover:shadow-sm"
               initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
               whileInView={
                 shouldReduceMotion ? undefined : { opacity: 1, y: 0 }
