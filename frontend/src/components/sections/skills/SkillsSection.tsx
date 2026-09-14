@@ -1,4 +1,6 @@
 import { skillCategories } from "./skillsData"
+import { Reveal } from "@/components/ui/reveal"
+import { Badge } from "@/components/ui/badge"
 
 export function SkillsSection() {
   return (
@@ -16,25 +18,24 @@ export function SkillsSection() {
         </p>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
-          {skillCategories.map((category) => (
-            <article
+          {skillCategories.map((category, index) => (
+            <Reveal key={category.title} delay={index * 0.06}>
+              <article
               key={category.title}
-              className="rounded-2xl border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-px hover:shadow-md"
+              className="rounded-2xl border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md"
             >
               <h3 className="text-lg font-semibold tracking-tight text-foreground">
                 {category.title}
               </h3>
               <ul className="mt-5 flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
-                  <li
-                    key={skill}
-                    className="rounded-full border border-border bg-muted px-2.5 py-1 text-xs font-medium text-muted-foreground"
-                  >
-                    {skill}
+                  <li key={skill}>
+                    <Badge variant="secondary">{skill}</Badge>
                   </li>
                 ))}
               </ul>
-            </article>
+              </article>
+            </Reveal>
           ))}
         </div>
       </div>

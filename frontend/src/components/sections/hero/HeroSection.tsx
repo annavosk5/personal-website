@@ -38,15 +38,16 @@ export function HeroSection() {
         </motion.div>
 
         <motion.div
-          className="mx-auto w-full max-w-sm overflow-hidden rounded-2xl border border-border bg-card p-2 shadow-xl shadow-primary/5"
-          initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.97 }}
-          animate={shouldReduceMotion ? undefined : { opacity: 1, scale: 1 }}
+          className="group mx-auto w-full max-w-sm overflow-hidden rounded-2xl border border-border bg-card p-2 shadow-xl shadow-primary/5"
+          initial={shouldReduceMotion ? false : { opacity: 0, x: -64, scale: 0.97 }}
+          animate={shouldReduceMotion ? undefined : { opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 0.65, delay: 0.1, ease: "easeOut" }}
+          whileHover={shouldReduceMotion ? undefined : { y: -4, rotate: 0.5 }}
         >
           <img
             src="/5A9A3115_Original.jpg"
             alt="Anna Voskoboynik outdoors"
-            className="aspect-4/5 w-full rounded-xl object-cover object-[center_60%]"
+            className="aspect-4/5 w-full rounded-xl object-cover object-[center_60%] transition-transform duration-700 group-hover:scale-[1.03]"
           />
         </motion.div>
       </div>
