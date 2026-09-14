@@ -1,6 +1,7 @@
 import { GitBranch, Play } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { Reveal } from "@/components/ui/reveal"
 
 import { projects } from "./projectData"
 
@@ -8,22 +9,25 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="border-y border-border/60 bg-secondary/35">
       <div className="mx-auto max-w-6xl px-6 py-20">
-        <p className="text-sm font-medium tracking-[0.2em] text-muted-foreground uppercase">
-          Projects
-        </p>
-        <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-          Selected Work
-        </h2>
-        <p className="mt-4 max-w-2xl leading-7 text-muted-foreground">
-          A selection of projects that reflect my interests across software,
-          data, and product-focused development.
-        </p>
+        <Reveal>
+          <p className="text-sm font-medium tracking-[0.2em] text-muted-foreground uppercase">
+            Projects
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+            Selected Work
+          </h2>
+          <p className="mt-4 max-w-2xl leading-7 text-muted-foreground">
+            A selection of projects that reflect my interests across software,
+            data, and product-focused development.
+          </p>
+        </Reveal>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {projects.map((project) => (
-            <article
+          {projects.map((project, index) => (
+            <Reveal key={project.id} delay={index * 0.08}>
+              <article
               key={project.id}
-              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-md"
+              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-md"
             >
               <div className="overflow-hidden border-b border-border bg-background p-4">
                 <img
@@ -88,7 +92,8 @@ export function ProjectsSection() {
                   </div>
                 )}
               </div>
-            </article>
+              </article>
+            </Reveal>
           ))}
         </div>
       </div>

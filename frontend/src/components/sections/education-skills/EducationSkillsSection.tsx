@@ -1,3 +1,5 @@
+import { Reveal } from "@/components/ui/reveal"
+
 export function EducationSkillsSection() {
   return (
     <section id="education" className="mx-auto max-w-6xl px-6 py-20">
@@ -9,7 +11,8 @@ export function EducationSkillsSection() {
       </h2>
 
       <div className="mt-10 grid gap-6 md:grid-cols-2">
-        <article className="rounded-2xl border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-px hover:shadow-md sm:p-8">
+        <Reveal>
+          <article className="rounded-2xl border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md sm:p-8">
           <p className="text-sm font-medium tracking-[0.2em] text-muted-foreground uppercase">
             University
           </p>
@@ -22,9 +25,11 @@ export function EducationSkillsSection() {
           <p className="mt-6 text-sm font-medium text-primary">
             Expected graduation · June 2027
           </p>
-        </article>
+          </article>
+        </Reveal>
 
-        <article className="rounded-2xl border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-px hover:shadow-md sm:p-8">
+        <Reveal delay={0.08}>
+          <article className="rounded-2xl border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md sm:p-8">
           <p className="text-sm font-medium tracking-[0.2em] text-muted-foreground uppercase">
             Relevant Coursework
           </p>
@@ -34,7 +39,8 @@ export function EducationSkillsSection() {
             and Algorithms  · Principles of Computer Systems Design
              · Database Systems 1
           </p>
-        </article>
+          </article>
+        </Reveal>
       </div>
     </section>
   )

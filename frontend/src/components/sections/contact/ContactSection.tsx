@@ -1,11 +1,13 @@
 import { Mail, Send } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { Reveal } from "@/components/ui/reveal"
 
 export function ContactSection() {
   return (
     <section id="contact" className="mx-auto max-w-6xl px-6 py-20">
-      <div className="rounded-2xl border border-border bg-card px-6 py-14 text-center shadow-sm sm:px-10">
+      <Reveal>
+        <div className="rounded-2xl border border-border bg-card px-6 py-14 text-center shadow-sm transition-all hover:-translate-y-1 hover:shadow-md sm:px-10">
         <p className="text-sm font-medium tracking-[0.2em] text-muted-foreground uppercase">
           Contact
         </p>
@@ -38,7 +40,8 @@ export function ContactSection() {
             LinkedIn
           </Button>
         </div>
-      </div>
+        </div>
+      </Reveal>
     </section>
   )
 }
